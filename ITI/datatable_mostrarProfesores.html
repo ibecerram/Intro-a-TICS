@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>Limitless - Responsive Web by Isaac Becerra</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -28,6 +28,13 @@
 
 	<script src="assets/js/app.js"></script>
 	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
+	<!-- /theme JS files -->
+
+
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/notifications/bootbox.min.js"></script>
+	<script src="global_assets/js/demo_pages/components_modals.js"></script>
 	<!-- /theme JS files -->
 
 </head>
@@ -331,7 +338,7 @@
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
 						<img src="global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
-						<span>Victoria</span>
+						<span>Isaac</span>
 					</a>
 
 					<div class="dropdown-menu dropdown-menu-right">
@@ -381,9 +388,9 @@
 							</div>
 
 							<div class="media-body">
-								<div class="media-title font-weight-semibold">Victoria Baker</div>
+								<div class="media-title font-weight-semibold">Isaac Becerra</div>
 								<div class="font-size-xs opacity-50">
-									<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
+									<i class="icon-pin font-size-sm"></i> &nbsp;Cd. Victoria, Tam, MX.
 								</div>
 							</div>
 
@@ -400,10 +407,10 @@
 				<div class="card card-sidebar-mobile">
 					<ul class="nav nav-sidebar" data-nav-type="accordion">
 
-					<!-- Main -->
+						<!-- Main -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Principal</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
-							<a href="index2.php" class="nav-link active">
+							<a href="index2.php" class="nav-link">
 								<i class="icon-home4"></i>
 								<span>
 									Dashboard
@@ -411,27 +418,27 @@
 							</a>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Alumnos</span></a>
+							<a href="#" class="nav-link"><i class="icon-users"></i> <span>Alumnos</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
 								
 								<li class="nav-item"><a href="formAgregarAlumnos2.php" class="nav-link">Agregar alumnos</a></li>
 								<li class="nav-item"><a href="formEditarAlumnos2.php" class="nav-link">Editar alumnos</a></li>
-								<li class="nav-item"><a href="datatable_mostrarAlumnos2.php" class="nav-link active">Mostrar alumnos</a></li>
+								<li class="nav-item"><a href="datatable_mostrarAlumnos2.php" class="nav-link">Mostrar alumnos</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-color-sampler"></i> <span>Profesores</span></a>
+							<a href="#" class="nav-link"><i class="icon-user-tie"></i> <span>Profesores</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Themes">
 								<li class="nav-item"><a href="formAgregarProfesores2.php" class="nav-link">Agregar profesores</a></li>
 								<li class="nav-item"><a href="formEditarProfesores2.php" class="nav-link">Editar profesores</a></li>
-								<li class="nav-item"><a href="datatable_mostrarProfesores2.php" class="nav-link active">Mostrar profesores</a></li>
+								<li class="nav-item"><a href="datatable_mostrarProfesores2.php" class="nav-link">Mostrar profesores</a></li>
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Materias</span></a>
+							<a href="#" class="nav-link"><i class="icon-books"></i> <span>Materias</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
@@ -442,7 +449,7 @@
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Grupos</span></a>
+							<a href="#" class="nav-link"><i class="icon-collaboration"></i> <span>Grupos</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
@@ -453,11 +460,22 @@
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Pagos</span></a>
+							<a href="#" class="nav-link"><i class="icon-bus"></i> <span>Tranporte</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
-								<li class="nav-item"><a href="formAgregarPago2.php" class="nav-link">Agregar pago</a></li>
+								<li class="nav-item"><a href="formAgregarPago2.php" class="nav-link">Reservar transporte (pagar)</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-reading"></i> <span>Tutorías</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								
+								<li class="nav-item"><a href="formAgregarTutorias2.php" class="nav-link">Agregar tutorías</a></li>
+								<li class="nav-item"><a href="formEditarTutorias2.php" class="nav-link">Editar tutorías</a></li>
+								<li class="nav-item"><a href="datatable_mostrarTutorias2.php" class="nav-link">Mostrar tutorías</a></li>
 							</ul>
 						</li>
 
@@ -589,8 +607,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -612,8 +630,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -635,8 +653,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -659,8 +677,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -683,8 +701,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -707,8 +725,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -731,8 +749,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -755,8 +773,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -779,8 +797,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -803,8 +821,8 @@
 											</a>
 
 											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-database-edit2"></i>Editar</a>
-												<a href="#" class="dropdown-item"><i class="icon-cancel-square2"></i>Eliminar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
 											</div>
 										</div>
 									</div>
@@ -911,7 +929,7 @@
 			
 											<div class="col-md-6">
 												<fieldset>
-								                	<legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> Datos escolares</legend>
+								                	<legend class="font-weight-semibold"><i class="icon-quill4 mr-2"></i> Datos escolares</legend>
 			
 													<div class="form-group row">
 														<label class="col-lg-3 col-form-label">Clave interna del maestro</label>
@@ -931,7 +949,7 @@
 										</div>
 			
 										<div class="text-right">
-											<button type="submit" class="btn btn-primary">Agregar docente <i class="icon-paperplane ml-2"></i></button>
+											<button type="submit" class="btn btn-primary">Agregar docente <i class="icon-vcard ml-2"></i></button>
 										</div>
 									</form>
 								</div>
@@ -943,6 +961,179 @@
 				</div>
 			</div>
 			<!-- /horizontal form modal -->
+
+			<!-- Horizontal form modal EDITADO -->
+			<div id="modal_form_horizontal-editar" class="modal fade" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Editar profesor</h5>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						
+
+						<!-- Content area -->
+						<div class="content">				
+			
+							<!-- 2 columns form -->
+							<div class="card">
+								<div class="card-header header-elements-inline">
+									<h5 class="card-title">Datos del docente</h5>
+									<div class="header-elements">
+										<div class="list-icons">
+			   			            		<a class="list-icons-item" data-action="collapse"></a>
+			   			            		<a class="list-icons-item" data-action="reload"></a>
+			   			            		<a class="list-icons-item" data-action="remove"></a>
+			   			            	</div>
+					    			        	</div>
+								</div>
+			
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-6">
+												<fieldset>
+													<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Datos personales</legend>
+													
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Nombre</label>
+														<div class="col-lg-9">
+															<div class="row">
+																<div class="col-md-6">
+																	<input type="text" placeholder="Nombre" class="form-control">
+																</div>
+			
+																<div class="col-md-6">
+																	<input type="text" placeholder="Apellido paterno" class="form-control">
+																</div>
+			
+																<div class="col-md-6">
+																	<input type="text" placeholder="Apellido materno" class="form-control">
+																</div>
+															</div>
+														</div>
+													</div>
+																		
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Correo electrónico</label>
+														<div class="col-lg-9">
+															<input type="text" placeholder="tucorreo@gmail.com" class="form-control">
+														</div>
+													</div>
+			
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Teléfono celular</label>
+														<div class="col-lg-9">
+															<input type="text" class="form-control" placeholder="Celular">
+														</div>
+													</div>
+					
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Dirección</label>
+														<div class="col-lg-9">
+															<input type="text" class="form-control" placeholder="¿Dónde vives?">
+														</div>
+													</div>
+			
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Cédula profesional</label>
+														<div class="col-lg-9">
+															<input type="text" class="form-control" placeholder="Cédula">
+														</div>
+													</div>
+			
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Información adicional</label>
+														<div class="col-lg-9">
+															<textarea rows="5" cols="5" class="form-control" placeholder="Opcional"></textarea>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+			
+											<div class="col-md-6">
+												<fieldset>
+								                	<legend class="font-weight-semibold"><i class="icon-quill4 mr-2"></i> Datos escolares</legend>
+			
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Clave interna del maestro</label>
+														<div class="col-lg-9">
+															<input type="text" class="form-control" placeholder="Clave">
+														</div>
+													</div>
+			
+													<div class="form-group row">
+														<label class="col-lg-3 col-form-label">Año de ingreso</label>
+														<div class="col-lg-9">
+															<input type="text" class="form-control" placeholder="Año">
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+			
+										<div class="text-right">
+											<button type="submit" class="btn btn-primary">Editar docente <i class="icon-address-book ml-2"></i></button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!-- /2 columns form -->	
+						</div>
+						<!-- /content area -->
+					</div>
+				</div>
+			</div>
+			<!-- /horizontal form modal -->
+
+			<!-- Warning modal -->
+				<div id="modal_theme_warning" class="modal fade" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header bg-warning">
+								<h2 class="modal-title">¡Alerta! Cuidado... 
+									<i class="icon-shield-notice ml-4"></i>
+								</h2>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<h3 class="font-weight-semibold">¿Estás seguro?</h3>
+								<p>
+									Estás a punto de eliminar un dato del sistema. Al dar clic en eliminar no podrás deshacer cambios y los datos se eliminarán permanentemente.
+								</p>
+
+								<hr>
+
+								<p class="font-weight-semibold">
+									Para mayor seguridad, deberás indicar tu usuario y contraseña:
+								</p>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Ingresa usuario</label>
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="Usuario">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Ingresa contraseña</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" placeholder="Contraseña">
+									</div>
+								</div>
+
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn bg-warning" data-dismiss="modal">Eliminar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /warning modal -->
+
 
 
 			<!-- Footer -->

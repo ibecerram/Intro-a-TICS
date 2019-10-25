@@ -82,8 +82,6 @@ var Modals = function () {
                 },
                 callback: function (result) {
                     bootbox.alert({
-                        title: 'Confirmation result',
-                        message: 'Confirm result: ' + result
                     });
                 }
             });
@@ -123,7 +121,7 @@ var Modals = function () {
         $('#prompt_value').on('click', function() {
             bootbox.prompt({
                 title: 'What is your real name?',
-                value: 'Eugene Kopyov',
+                value: 'sdasdasdasd',
                 buttons: {
                     confirm: {
                         label: 'Yes',

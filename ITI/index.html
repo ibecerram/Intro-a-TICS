@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>Limitless - Responsive Web by Isaac Becerra</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -28,6 +28,13 @@
 	<script src="assets/js/app.js"></script>
 	<script src="global_assets/js/demo_pages/charts/echarts/pies_donuts.js"></script>
 	<!-- /theme JS files -->
+
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/demo_pages/dashboard.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+
+
 
 </head>
 
@@ -330,7 +337,7 @@
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
 						<img src="global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
-						<span>Victoria</span>
+						<span>Isaac</span>
 					</a>
 
 					<div class="dropdown-menu dropdown-menu-right">
@@ -380,9 +387,9 @@
 							</div>
 
 							<div class="media-body">
-								<div class="media-title font-weight-semibold">Victoria Baker</div>
+								<div class="media-title font-weight-semibold">Isaac Becerra</div>
 								<div class="font-size-xs opacity-50">
-									<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
+									<i class="icon-pin font-size-sm"></i> &nbsp;Cd. Victoria, Tam, MX.
 								</div>
 							</div>
 
@@ -402,7 +409,7 @@
 						<!-- Main -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Principal</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
-							<a href="index2.php" class="nav-link active">
+							<a href="index2.php" class="nav-link">
 								<i class="icon-home4"></i>
 								<span>
 									Dashboard
@@ -410,27 +417,27 @@
 							</a>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Alumnos</span></a>
+							<a href="#" class="nav-link"><i class="icon-users"></i> <span>Alumnos</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
 								
 								<li class="nav-item"><a href="formAgregarAlumnos2.php" class="nav-link">Agregar alumnos</a></li>
 								<li class="nav-item"><a href="formEditarAlumnos2.php" class="nav-link">Editar alumnos</a></li>
-								<li class="nav-item"><a href="datatable_mostrarAlumnos2.php" class="nav-link active">Mostrar alumnos</a></li>
+								<li class="nav-item"><a href="datatable_mostrarAlumnos2.php" class="nav-link">Mostrar alumnos</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-color-sampler"></i> <span>Profesores</span></a>
+							<a href="#" class="nav-link"><i class="icon-user-tie"></i> <span>Profesores</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Themes">
 								<li class="nav-item"><a href="formAgregarProfesores2.php" class="nav-link">Agregar profesores</a></li>
 								<li class="nav-item"><a href="formEditarProfesores2.php" class="nav-link">Editar profesores</a></li>
-								<li class="nav-item"><a href="datatable_mostrarProfesores2.php" class="nav-link active">Mostrar profesores</a></li>
+								<li class="nav-item"><a href="datatable_mostrarProfesores2.php" class="nav-link">Mostrar profesores</a></li>
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Materias</span></a>
+							<a href="#" class="nav-link"><i class="icon-books"></i> <span>Materias</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
@@ -441,7 +448,7 @@
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Grupos</span></a>
+							<a href="#" class="nav-link"><i class="icon-collaboration"></i> <span>Grupos</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
@@ -452,11 +459,22 @@
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Pagos</span></a>
+							<a href="#" class="nav-link"><i class="icon-bus"></i> <span>Tranporte</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
-								<li class="nav-item"><a href="formAgregarPago2.php" class="nav-link">Agregar pago</a></li>
+								<li class="nav-item"><a href="formAgregarPago2.php" class="nav-link">Reservar transporte (pagar)</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-reading"></i> <span>Tutorías</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								
+								<li class="nav-item"><a href="formAgregarTutorias2.php" class="nav-link">Agregar tutorías</a></li>
+								<li class="nav-item"><a href="formEditarTutorias2.php" class="nav-link">Editar tutorías</a></li>
+								<li class="nav-item"><a href="datatable_mostrarTutorias2.php" class="nav-link">Mostrar tutorías</a></li>
 							</ul>
 						</li>
 
@@ -705,33 +723,33 @@
 					<div class="col-xl-6">
 						
 						<!-- Multi levels and timeline -->
-				<div class="row">
-
-					<div class="col-xl-12">
-
-						<!-- Pie chart timeline -->
-						<div class="card">
-							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Egresados por generación</h5>
-								<div class="header-elements">
-									<div class="list-icons">
-				                		<a class="list-icons-item" data-action="collapse"></a>
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                		<a class="list-icons-item" data-action="remove"></a>
-				                	</div>
-			                	</div>
-							</div>
-
-							<div class="card-body">
-								<div class="chart-container">
-									<div class="chart has-fixed-height" id="pie_timeline"></div>
+						<div class="row">
+		
+							<div class="col-xl-12">
+		
+								<!-- Pie chart timeline -->
+								<div class="card">
+									<div class="card-header header-elements-inline">
+										<h5 class="card-title">Egresados por generación</h5>
+										<div class="header-elements">
+											<div class="list-icons">
+						                		<a class="list-icons-item" data-action="collapse"></a>
+						                		<a class="list-icons-item" data-action="reload"></a>
+						                		<a class="list-icons-item" data-action="remove"></a>
+						                	</div>
+			   		             	</div>
+									</div>
+		
+									<div class="card-body">
+										<div class="chart-container">
+											<div class="chart has-fixed-height" id="pie_timeline"></div>
+										</div>
+									</div>
 								</div>
+								<!-- /pie chart timeline -->
+		
 							</div>
 						</div>
-						<!-- /pie chart timeline -->
-
-					</div>
-				</div>
 				<!-- /multi levels and timeline -->
 					</div>
 				</div>	
@@ -740,10 +758,12 @@
 
 					<div class="row">
 						<div class="col-xl-6">
+							
+						
 							<!-- Daily financials -->
 						<div class="card">
 							<div class="card-header header-elements-inline">
-								<h6 class="card-title">Reporte diario</h6>
+								<h5 class="card-title">Reporte diario</h5>
 								<div class="header-elements">
 									<div class="form-check form-check-inline form-check-right form-check-switchery form-check-switchery-sm">
 										<label class="form-check-label">
@@ -852,10 +872,265 @@
 							</div>
 						</div>
 						<!-- /daily financials -->
+
+
+						</div>
+
+						<div class="col-xl-6">
+							
+						
+							<!-- Daily sales -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Reporte diario tranporte</h5>
+								<div class="header-elements">
+									<span class="font-weight-bold text-danger-600 ml-2">$4,378</span>
+									<div class="list-icons ml-3">
+				                		<div class="list-icons-item dropdown">
+				                			<a href="#" class="list-icons-item dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i></a>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item"><i class="icon-sync"></i> Update data</a>
+												<a href="#" class="dropdown-item"><i class="icon-list-unordered"></i> Detailed log</a>
+												<a href="#" class="dropdown-item"><i class="icon-pie5"></i> Statistics</a>
+												<div class="dropdown-divider"></div>
+												<a href="#" class="dropdown-item"><i class="icon-cross3"></i> Clear list</a>
+											</div>
+				                		</div>
+				                	</div>
+								</div>
+							</div>
+
+							<div class="card-body">
+								<div class="chart" id="sales-heatmap"></div>
+							</div>
+
+							<div class="table-responsive">
+								<table class="table text-nowrap">
+									<thead>
+										<tr>
+											<th class="w-100">Transpais (Movimientos)</th>
+											<th>Hora</th>
+											<th>Precio</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="d-flex align-items-center">
+													<div class="mr-3">
+														<a href="#" class="btn bg-primary-400 rounded-round btn-icon btn-sm">
+															<span class="letter-icon"></span>
+														</a>
+													</div>
+													<div>
+														<a href="#" class="text-default font-weight-semibold letter-icon-title">Sofía Hernández</a>
+														<div class="text-muted font-size-sm"><i class="icon-checkmark3 font-size-sm mr-1"></i> Pagó ticket</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<span class="text-muted font-size-sm">06:28 pm</span>
+											</td>
+											<td>
+												<h6 class="font-weight-semibold mb-0">$125.00</h6>
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												<div class="d-flex align-items-center">
+													<div class="mr-3">
+														<a href="#" class="btn bg-danger-400 rounded-round btn-icon btn-sm">
+															<span class="letter-icon"></span>
+														</a>
+													</div>
+													<div>
+														<a href="#" class="text-default font-weight-semibold letter-icon-title">Aldo López</a>
+														<div class="text-muted font-size-sm"><i class="icon-spinner11 font-size-sm mr-1"></i> Renovó transporte</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<span class="text-muted font-size-sm">04:52 pm</span>
+											</td>
+											<td>
+												<h6 class="font-weight-semibold mb-0">$515.00</h6>
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												<div class="d-flex align-items-center">
+													<div class="mr-3">
+														<a href="#" class="btn bg-indigo-400 rounded-round btn-icon btn-sm">
+															<span class="letter-icon"></span>
+														</a>
+													</div>
+													<div>
+														<a href="#" class="text-default font-weight-semibold letter-icon-title">Diana González</a>
+														<div class="text-muted font-size-sm"><i class="icon-lifebuoy font-size-sm mr-1"></i> Compra redondo $515.00</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<span class="text-muted font-size-sm">01:26 pm</span>
+											</td>
+											<td>
+												<h6 class="font-weight-semibold mb-0">$545.00</h6>
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												<div class="d-flex align-items-center">
+													<div class="mr-3">
+														<a href="#" class="btn bg-success-400 rounded-round btn-icon btn-sm">
+															<span class="letter-icon"></span>
+														</a>
+													</div>
+													<div>
+														<a href="#" class="text-default font-weight-semibold letter-icon-title">Omar Mendoza</a>
+														<div class="text-muted font-size-sm"><i class="icon-lifebuoy font-size-sm mr-1"></i> Compra redondo $515.00</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<span class="text-muted font-size-sm">11:46 am</span>
+											</td>
+											<td>
+												<h6 class="font-weight-semibold mb-0">$550.00</h6>
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												<div class="d-flex align-items-center">
+													<div class="mr-3">
+														<a href="#" class="btn bg-danger-400 rounded-round btn-icon btn-sm">
+															<span class="letter-icon"></span>
+														</a>
+													</div>
+													<div>
+														<a href="#" class="text-default font-weight-semibold letter-icon-title">Alondra Badillo</a>
+														<div class="text-muted font-size-sm"><i class="icon-spinner11 font-size-sm mr-2"></i> Renovación transporte</div>
+													</div>
+												</div>
+											</td>
+											<td>
+												<span class="text-muted font-size-sm">10:29 am</span>
+											</td>
+											<td>
+												<h6 class="font-weight-semibold mb-0">$250.00</h6>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- /daily sales -->
 						</div>
 					</div>
 
-				
+
+						<!-- Progress counters -->
+						<div class="row">
+							<div class="col-xl-6">
+
+								<!-- Donut multiples -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Reparto total de asesorías por carrera</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+
+					<div class="card-body">
+						<div class="chart-container">
+							<div class="chart has-fixed-height" id="pie_multiples"></div>
+						</div>
+					</div>
+				</div>
+				<!-- /donut multiples -->
+
+							</div>
+
+							<div class="col-xl-6">
+
+							<!-- Traffic sources -->
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title">Tutorías en tiempo real...</h5>
+								<div class="header-elements">
+									<div class="form-check form-check-right form-check-switchery form-check-switchery-sm">
+										<label class="form-check-label">
+											Actualmente
+											<input type="checkbox" class="form-input-switchery" checked data-fouc>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body py-0">
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-teal text-teal rounded-round border-2 btn-icon mr-3">
+												<i class="icon-plus3"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">Tutorías en total</div>
+												<span class="text-muted">1,458 tutorías</span>
+												<p class="text-muted">+%58.5</p>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="new-visitors"></div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-warning-400 text-warning-400 rounded-round border-2 btn-icon mr-3">
+												<i class="icon-watch2"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">Agregadas hoy</div>
+												<span class="text-muted">14 agregadas hoy</span>
+												<p class="text-muted">+%37.9</p>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="new-sessions"></div>
+									</div>
+
+									<div class="col-sm-4">
+										<div class="d-flex align-items-center justify-content-center mb-2">
+											<a href="#" class="btn bg-transparent border-indigo-400 text-indigo-400 rounded-round border-2 btn-icon mr-3">
+												<i class="icon-people"></i>
+											</a>
+											<div>
+												<div class="font-weight-semibold">Alumnos ayudados</div>
+												<span class="text-muted">
+
+													<span class="badge badge-mark border-success mr-2">
+													</span> 5,684 temas resueltos
+													<p class="text-muted">+%35.6</p>
+												</span>
+											</div>
+										</div>
+										<div class="w-75 mx-auto mb-3" id="total-online"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /traffic sources -->
+
+							</div>
+						</div>
+
+		
 
 			</div>
 			<!-- /content area -->

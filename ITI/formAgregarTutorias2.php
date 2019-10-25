@@ -29,6 +29,30 @@
 	<script src="assets/js/app.js"></script>
 	<script src="global_assets/js/demo_pages/form_layouts.js"></script>
 	<!-- /theme JS files -->
+	
+	<!-- JS DE PICKER DATE -->
+	<script src="global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script src="global_assets/js/plugins/notifications/jgrowl.min.js"></script>
+	
+	
+
+
+
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/noty.min.js"></script>
+
+	<script src="global_assets/js/demo_pages/extra_jgrowl_noty.js"></script>
+	<!-- /theme JS files -->
+
 
 </head>
 
@@ -492,7 +516,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Form </span> - Editar materias</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Form </span> - Agregar Tutorías</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -510,7 +534,7 @@
 						<div class="breadcrumb">
 							<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
 							<a href="#" class="breadcrumb-item">Forms</a>
-							<span class="breadcrumb-item active">Editar materia</span>
+							<span class="breadcrumb-item active">Agregar tutoría</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -550,7 +574,7 @@
 				<!-- 2 columns form -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Datos de materia</h5>
+						<h5 class="card-title">Datos del alumno</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -564,58 +588,47 @@
 
 
 						<div class="col-md-6">
-							<fieldset>
-								<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Encontrar materia</legend>
-								
-								<div class="form-group row">
-									<label class="col-lg-3 col-form-label">Ingresa clave de materia</label>
-									<div class="col-lg-9">
-										<div class="row">
-											<div class="col-md-6">
-												<input type="text" placeholder="Materia" class="form-control">
-											</div>
-
-											<div class="text-right">
-												<button type="submit" class="btn btn-primary">Buscar materia <i class="icon-folder-search ml-2"></i></button>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</fieldset>
 						</div>
 
 						<form action="#">
 							<div class="row">
 								<div class="col-md-6">
 									<fieldset>
-										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles generales</legend>
-										
+										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles del alumno</legend>
+
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Nombre de materia</label>
+											<label class="col-lg-3 col-form-label">Nombre</label>
 											<div class="col-lg-9">
-												<input type="text" placeholder="Materia" class="form-control">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+								
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Ingresa matrícula</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="Matrícula">
 											</div>
 										</div>
 
-								
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Ingresa clave de materia</label>
+											<label class="col-lg-3 col-form-label">Carrera del alumno</label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="Clave">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Rama de la materia</label>
-											<div class="col-lg-9">
-												<select data-placeholder="Materia" class="form-control form-control-select2" data-fouc>
+												<select data-placeholder="Carreras" class="form-control form-control-select2" data-fouc>
 													<option>
 														
 													</option>
-													<optgroup label="Tronco común">
-														<option value="TC">Tronco común</option>
-													</optgroup>
 													<optgroup label="Ingenierías">
 														<option value="ITI">Tecnologías de la Información</option>
 														<option value="ISA">Sistemas Automotrices</option>
@@ -632,48 +645,107 @@
 												</select>
 											</div>
 										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Tema atendido</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Tema atendido (Descripción)"></textarea>
+											</div>
+										</div>
+
+
 									</fieldset>
 								</div>
 
 								<div class="col-md-6">
 									<fieldset>
-					                	<legend class="font-weight-semibold"><i class="icon-certificate mr-2"></i> Datos específicos</legend>
+					                	<legend class="font-weight-semibold"><i class="icon-graduation2 mr-2"></i> Datos de la tutoría</legend>
+
+					                	<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nombre del maestro que impartirá la tutoría</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Cuatrimestre de la materia</label>
+											<label class="col-lg-3 col-form-label">Clave interna del maestro</label>
 											<div class="col-lg-9">
-												<select data-placeholder="Cuatrimestres" class="form-control form-control-select2" data-fouc>
+												<input type="text" class="form-control" placeholder="Clave">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Carrera del maestro</label>
+											<div class="col-lg-9">
+												<select data-placeholder="Carreras" class="form-control form-control-select2" data-fouc>
 													<option>
 														
 													</option>
-													<optgroup label="Cuatrimestres">
-														<option value="1">Cuatrimestre 1</option>
-														<option value="2">Cuatrimestre 2</option>
-														<option value="3">Cuatrimestre 3</option>
-														<option value="4">Cuatrimestre 4</option>
-														<option value="5">Cuatrimestre 5</option>
-														<option value="6">Cuatrimestre 6</option>
-														<option value="7">Cuatrimestre 7</option>
-														<option value="8">Cuatrimestre 8</option>
-														<option value="9">Cuatrimestre 9</option>
+													<optgroup label="Ingenierías">
+														<option value="ITI">Tecnologías de la Información</option>
+														<option value="ISA">Sistemas Automotrices</option>
+														<option value="IM">Mecatrónica</option>
+														<option value="ITM">Tecnologías de Manufactura</option>
+													</optgroup>
+													<optgroup label="Licenciaturas">
+														<option value="LAYGE">Administración y Gestión Empresarial</option>
+													</optgroup>
+													<optgroup label="Maestrías">
+														<option value="MER">Energías Renovables</option>
+														<option value="MI">Ingeniería</option>
 													</optgroup>
 												</select>
 											</div>
 										</div>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Clave de maestro</label>
+											<label class="col-lg-3 col-form-label">Fecha de sesión </label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="¿Quién imparte la materia?">
+												<div class="input-group">
+													<span class="input-group-prepend">
+														<span class="input-group-text">
+	
+															<i class="icon-calendar3"></i>
+														</span>
+													</span>
+													<input type="text" class="form-control" id="anytime-month-numeric" placeholder="Día de asesoría">
+												</div>
 											</div>
 										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Hora de sesión </label>
+											<div class="col-lg-9">
+												<div class="input-group">
+													<span class="input-group-prepend">
+														<span class="input-group-text"><i class="icon-alarm"></i></span>
+													</span>
+													<input type="text" class="form-control pickatime" placeholder="Hora de sesión">
+												</div>
+											</div>
+										</div>
+
 
 									</fieldset>
 								</div>
 							</div>
 
 							<div class="text-right">
-								<button type="submit" class="btn btn-primary">Editar materia <i class="icon-book ml-2"></i></button>
+								<button type="button" class="btn btn-primary" id="noty_styled_white">Agregar tutoría <i class="icon-profile ml-2"></i></button>
 							</div>
 						</form>
 					</div>
@@ -682,7 +754,6 @@
 
 			</div>
 			<!-- /content area -->
-
 
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">

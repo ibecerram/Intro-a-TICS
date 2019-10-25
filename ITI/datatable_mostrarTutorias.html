@@ -23,12 +23,32 @@
 	<!-- /core JS files -->
 
 	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
-	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
-	<script src="global_assets/js/demo_pages/form_layouts.js"></script>
+	<script src="global_assets/js/demo_pages/datatables_basic.js"></script>
 	<!-- /theme JS files -->
+
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/notifications/bootbox.min.js"></script>
+	<script src="global_assets/js/demo_pages/components_modals.js"></script>
+	<!-- /theme JS files -->
+	
+
+
+
+	<!-- JS DE PICKER DATE -->
+	<script src="global_assets/js/demo_pages/picker_date.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script src="global_assets/js/plugins/notifications/jgrowl.min.js"></script>
 
 </head>
 
@@ -492,7 +512,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Form </span> - Editar materias</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Base de datos</span> - Alumnos</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -509,8 +529,8 @@
 					<div class="d-flex">
 						<div class="breadcrumb">
 							<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
-							<a href="#" class="breadcrumb-item">Forms</a>
-							<span class="breadcrumb-item active">Editar materia</span>
+							<a href="#" class="breadcrumb-item">Base de datos</a>
+							<span class="breadcrumb-item active">Alumos</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -545,12 +565,223 @@
 
 
 			<!-- Content area -->
-			<div class="content">				
+			<div class="content">
 
-				<!-- 2 columns form -->
+				<!-- Basic datatable -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Datos de materia</h5>
+						<h5 class="card-title"><b>TUTORÍAS</b></h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+
+					<div class="card-body">
+						<button type="submit" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_form_horizontal">Agregar tutoría <i class="icon-file-plus ml-2"></i></button>
+					</div>
+
+					<!-- <button type="button" class="btn btn-light" id="sweet_warning">SWEET WARNING <i class="icon-play3 ml-2"></i></button>
+					<button type="button" class="btn btn-light" id="sweet_info">SWEET INFO <i class="icon-play3 ml-2"></i></button>
+					<button type="button" class="btn btn-light" id="noty_bottom_right">EXTRA JGROWLY <i class="icon-play3 ml-2"></i></button> -->
+
+					<table class="table datatable-basic table-hover">
+						<thead>
+							<tr>
+								<th>id Tutoria</th>
+								<th>Nombre alumno</th>
+								<th>Matrícula alumno</th>
+								<th>Carrera alumno</th>
+								<th>Tema</th>
+
+								<th>Nombre maestro</th>
+								<th>Clave maestro</th>
+								<th>Carrera maestro</th>
+								<th>Fecha sesión</th>
+
+								<th class="text-center">Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>00001</td>
+								<td>Santiago Hernandez Mireles</td>
+								<td>1930064</td>
+								<td>LAYGE</td>
+								<td>Álgebra Lineal</td>
+								<td>Mariano Lara Fuentes</td>
+								<td>000054</td>
+								<td>MI</td>
+								<td>22/10/2019 14:30</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>00002</td>
+								<td>Alan Reyes Ponce</td>
+								<td>1930087</td>
+								<td>ITI</td>
+								<td>Algoritmos</td>
+								<td>Rafael Ojasso Quintero</td>
+								<td>000087</td>
+								<td>IM</td>
+								<td>23/10/2019 15:30</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>00003</td>
+								<td>María Giménez González</td>
+								<td>1890646</td>
+								<td>ISA</td>
+								<td>Base de datos II</td>
+								<td>Imelda López Gutiérrez</td>
+								<td>000023</td>
+								<td>LAYGE</td>
+								<td>24/10/2019 16:00</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>00004</td>
+								<td>Mariano Matamoros Fidel</td>
+								<td>1930087</td>
+								<td>ITI</td>
+								<td>Mecánica de fluidos</td>
+								<td>Isaac Castillo Martínez</td>
+								<td>000021</td>
+								<td>ISA</td>
+								<td>25/10/2019 10:45</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>00005</td>
+								<td>Nicolás Hernández Bravo</td>
+								<td>1925478</td>
+								<td>IM</td>
+								<td>Física I</td>
+								<td>Jesús Becerra Martínez</td>
+								<td>000031</td>
+								<td>ITI</td>
+								<td>26/10/2019 12:30</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>00006</td>
+								<td>Ricardo García Sol</td>
+								<td>1930465</td>
+								<td>IM</td>
+								<td>Química II</td>
+								<td>Alaina Xibille Leal</td>
+								<td>000010</td>
+								<td>ITM</td>
+								<td>27/10/2019 17:00</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<div class="dropdown">
+											<a href="#" class="list-icons-item" data-toggle="dropdown">
+												<i class="icon-menu9"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_form_horizontal-editar" ><i class="icon-database-edit2"></i>Editar</a>
+												<a href="#" class="dropdown-item" data-toggle="modal" data-target="#modal_theme_warning"  ><i class="icon-cancel-square2"></i>Eliminar</a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- /Basic datatable -->
+
+
+			</div>
+			<!-- /content area -->
+			
+			 <!-- Horizontal form modal AGREGAR TUTORÍA -->
+			<div id="modal_form_horizontal" class="modal fade" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Agregar tutoría</h5>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						
+
+						<!-- Content area -->
+						<div class="content">				
+			
+							<!-- 2 columns form -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Datos de la tutoría</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -564,58 +795,47 @@
 
 
 						<div class="col-md-6">
-							<fieldset>
-								<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Encontrar materia</legend>
-								
-								<div class="form-group row">
-									<label class="col-lg-3 col-form-label">Ingresa clave de materia</label>
-									<div class="col-lg-9">
-										<div class="row">
-											<div class="col-md-6">
-												<input type="text" placeholder="Materia" class="form-control">
-											</div>
-
-											<div class="text-right">
-												<button type="submit" class="btn btn-primary">Buscar materia <i class="icon-folder-search ml-2"></i></button>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</fieldset>
 						</div>
 
 						<form action="#">
 							<div class="row">
 								<div class="col-md-6">
 									<fieldset>
-										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles generales</legend>
-										
+										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles del alumno</legend>
+
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Nombre de materia</label>
+											<label class="col-lg-3 col-form-label">Nombre</label>
 											<div class="col-lg-9">
-												<input type="text" placeholder="Materia" class="form-control">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+								
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Ingresa matrícula</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="Matrícula">
 											</div>
 										</div>
 
-								
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Ingresa clave de materia</label>
+											<label class="col-lg-3 col-form-label">Carrera del alumno</label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="Clave">
-											</div>
-										</div>
-										
-										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Rama de la materia</label>
-											<div class="col-lg-9">
-												<select data-placeholder="Materia" class="form-control form-control-select2" data-fouc>
+												<select data-placeholder="Carreras" class="form-control form-control-select2" >
 													<option>
 														
 													</option>
-													<optgroup label="Tronco común">
-														<option value="TC">Tronco común</option>
-													</optgroup>
 													<optgroup label="Ingenierías">
 														<option value="ITI">Tecnologías de la Información</option>
 														<option value="ISA">Sistemas Automotrices</option>
@@ -632,58 +852,369 @@
 												</select>
 											</div>
 										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Tema atendido</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Tema atendido (Descripción)"></textarea>
+											</div>
+										</div>
+
+
 									</fieldset>
 								</div>
 
 								<div class="col-md-6">
 									<fieldset>
-					                	<legend class="font-weight-semibold"><i class="icon-certificate mr-2"></i> Datos específicos</legend>
+					                	<legend class="font-weight-semibold"><i class="icon-graduation2 mr-2"></i> Detalles de la tutoría</legend>
+
+					                	<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nombre del maestro que impartirá la tutoría</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Cuatrimestre de la materia</label>
+											<label class="col-lg-3 col-form-label">Clave interna del maestro</label>
 											<div class="col-lg-9">
-												<select data-placeholder="Cuatrimestres" class="form-control form-control-select2" data-fouc>
+												<input type="text" class="form-control" placeholder="Clave">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Carrera del maestro</label>
+											<div class="col-lg-9">
+												<select data-placeholder="Carreras" class="form-control form-control-select2" >
 													<option>
 														
 													</option>
-													<optgroup label="Cuatrimestres">
-														<option value="1">Cuatrimestre 1</option>
-														<option value="2">Cuatrimestre 2</option>
-														<option value="3">Cuatrimestre 3</option>
-														<option value="4">Cuatrimestre 4</option>
-														<option value="5">Cuatrimestre 5</option>
-														<option value="6">Cuatrimestre 6</option>
-														<option value="7">Cuatrimestre 7</option>
-														<option value="8">Cuatrimestre 8</option>
-														<option value="9">Cuatrimestre 9</option>
+													<optgroup label="Ingenierías">
+														<option value="ITI">Tecnologías de la Información</option>
+														<option value="ISA">Sistemas Automotrices</option>
+														<option value="IM">Mecatrónica</option>
+														<option value="ITM">Tecnologías de Manufactura</option>
+													</optgroup>
+													<optgroup label="Licenciaturas">
+														<option value="LAYGE">Administración y Gestión Empresarial</option>
+													</optgroup>
+													<optgroup label="Maestrías">
+														<option value="MER">Energías Renovables</option>
+														<option value="MI">Ingeniería</option>
 													</optgroup>
 												</select>
 											</div>
 										</div>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Clave de maestro</label>
+											<label class="col-lg-3 col-form-label">Fecha de sesión </label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="¿Quién imparte la materia?">
+												<div class="input-group">
+													<span class="input-group-prepend">
+														<span class="input-group-text">
+	
+															<i class="icon-calendar3"></i>
+														</span>
+													</span>
+													<input type="text" class="form-control" id="anytime-month-numeric" placeholder="Día de asesoría">
+												</div>
 											</div>
 										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Hora de sesión </label>
+											<div class="col-lg-9">
+												<div class="input-group">
+													<span class="input-group-prepend">
+														<span class="input-group-text"><i class="icon-alarm"></i></span>
+													</span>
+													<input type="text" class="form-control pickatime" placeholder="Hora de sesión">
+												</div>
+											</div>
+										</div>
+
 
 									</fieldset>
 								</div>
 							</div>
 
 							<div class="text-right">
-								<button type="submit" class="btn btn-primary">Editar materia <i class="icon-book ml-2"></i></button>
+								<button type="submit" class="btn btn-primary">Agregar tutoría <i class="icon-profile ml-2"></"></i></button>
 							</div>
 						</form>
 					</div>
 				</div>
 				<!-- /2 columns form -->
-
+						</div>
+						<!-- /content area -->
+					</div>
+				</div>
 			</div>
-			<!-- /content area -->
+			<!-- /horizontal form modal -->
+
+				
+			 <!-- Horizontal form modal EDITAR TUTORÍA -->
+			<div id="modal_form_horizontal-editar" class="modal fade" tabindex="-1">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Editar tutoría</h5>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						
+
+						<!-- Content area -->
+						<div class="content">				
+			
+							<!-- 2 columns form -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Datos de la tutoría</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
+		                	</div>
+	                	</div>
+					</div>
+
+					<div class="card-body">
 
 
+						<div class="col-md-6">
+						</div>
+
+						<form action="#">
+							<div class="row">
+								<div class="col-md-6">
+									<fieldset>
+										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles del alumno</legend>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nombre</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+								
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Ingresa matrícula</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="Matrícula">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Carrera del alumno</label>
+											<div class="col-lg-9">
+												<select data-placeholder="Carreras" class="form-control form-control-select2" >
+													<option>
+														
+													</option>
+													<optgroup label="Ingenierías">
+														<option value="ITI">Tecnologías de la Información</option>
+														<option value="ISA">Sistemas Automotrices</option>
+														<option value="IM">Mecatrónica</option>
+														<option value="ITM">Tecnologías de Manufactura</option>
+													</optgroup>
+													<optgroup label="Licenciaturas">
+														<option value="LAYGE">Administración y Gestión Empresarial</option>
+													</optgroup>
+													<optgroup label="Maestrías">
+														<option value="MER">Energías Renovables</option>
+														<option value="MI">Ingeniería</option>
+													</optgroup>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Tema atendido</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Tema atendido (Descripción)"></textarea>
+											</div>
+										</div>
+
+
+									</fieldset>
+								</div>
+
+								<div class="col-md-6">
+									<fieldset>
+					                	<legend class="font-weight-semibold"><i class="icon-graduation2 mr-2"></i> Detalles de la tutoría</legend>
+
+					                	<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nombre del maestro que impartirá la tutoría</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Clave interna del maestro</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="Clave">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Carrera del maestro</label>
+											<div class="col-lg-9">
+												<select data-placeholder="Carreras" class="form-control form-control-select2" >
+													<option>
+														
+													</option>
+													<optgroup label="Ingenierías">
+														<option value="ITI">Tecnologías de la Información</option>
+														<option value="ISA">Sistemas Automotrices</option>
+														<option value="IM">Mecatrónica</option>
+														<option value="ITM">Tecnologías de Manufactura</option>
+													</optgroup>
+													<optgroup label="Licenciaturas">
+														<option value="LAYGE">Administración y Gestión Empresarial</option>
+													</optgroup>
+													<optgroup label="Maestrías">
+														<option value="MER">Energías Renovables</option>
+														<option value="MI">Ingeniería</option>
+													</optgroup>
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Fecha de sesión </label>
+											<div class="col-lg-9">
+												<div class="input-group">
+													<span class="input-group-prepend">
+														<span class="input-group-text">
+	
+															<i class="icon-calendar3"></i>
+														</span>
+													</span>
+													<input type="text" class="form-control" id="anytime-month-numeric" placeholder="Día de asesoría">
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Hora de sesión </label>
+											<div class="col-lg-9">
+												<div class="input-group">
+													<span class="input-group-prepend">
+														<span class="input-group-text"><i class="icon-alarm"></i></span>
+													</span>
+													<input type="text" class="form-control pickatime" placeholder="Hora de sesión">
+												</div>
+											</div>
+										</div>
+
+
+									</fieldset>
+								</div>
+							</div>
+
+							<div class="text-right">
+								<button type="submit" class="btn btn-primary" data-dismiss="modal">Editar tutoría <i class="icon-bookmark ml-2"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /2 columns form -->
+						</div>
+						<!-- /content area -->
+					</div>
+				</div>
+			</div>
+			<!-- /horizontal form modal -->
+
+
+			 <!-- Warning modal -->
+				<div id="modal_theme_warning" class="modal fade" tabindex="-1">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header bg-warning">
+								<h2 class="modal-title">¡Alerta! Cuidado... 
+									<i class="icon-shield-notice ml-4"></i>
+								</h2>
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+							</div>
+
+							<div class="modal-body">
+								<h3 class="font-weight-semibold">¿Estás seguro?</h3>
+								<p>
+									Estás a punto de eliminar un dato del sistema. Al dar clic en eliminar no podrás deshacer cambios y los datos se eliminarán permanentemente.
+								</p>
+
+								<hr>
+
+								<p class="font-weight-semibold">
+									Para mayor seguridad, deberás indicar tu usuario y contraseña:
+								</p>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Ingresa usuario</label>
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="Usuario">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label">Ingresa contraseña</label>
+									<div class="col-md-6">
+										<input type="password" class="form-control" placeholder="Contraseña">
+									</div>
+								</div>
+
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn bg-warning" data-dismiss="modal">Eliminar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /warning modal -->
+					
 			<!-- Footer -->
 			<div class="navbar navbar-expand-lg navbar-light">
 				<div class="text-center d-lg-none w-100">

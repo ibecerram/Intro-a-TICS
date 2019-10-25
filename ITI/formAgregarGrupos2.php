@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>Limitless - Responsive Web by Isaac Becerra</title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -29,6 +29,20 @@
 	<script src="assets/js/app.js"></script>
 	<script src="global_assets/js/demo_pages/form_layouts.js"></script>
 	<!-- /theme JS files -->
+
+
+
+
+
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script src="global_assets/js/plugins/notifications/noty.min.js"></script>
+
+	<script src="global_assets/js/demo_pages/extra_jgrowl_noty.js"></script>
+	<!-- /theme JS files -->
+
+
 
 </head>
 
@@ -331,7 +345,7 @@
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
 						<img src="global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
-						<span>Victoria</span>
+						<span>Isaac</span>
 					</a>
 
 					<div class="dropdown-menu dropdown-menu-right">
@@ -381,9 +395,9 @@
 							</div>
 
 							<div class="media-body">
-								<div class="media-title font-weight-semibold">Victoria Baker</div>
+								<div class="media-title font-weight-semibold">Isaac Becerra</div>
 								<div class="font-size-xs opacity-50">
-									<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
+									<i class="icon-pin font-size-sm"></i> &nbsp;Cd. Victoria, Tam, MX.
 								</div>
 							</div>
 
@@ -403,7 +417,7 @@
 						<!-- Main -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Principal</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
-							<a href="index2.php" class="nav-link active">
+							<a href="index2.php" class="nav-link">
 								<i class="icon-home4"></i>
 								<span>
 									Dashboard
@@ -411,27 +425,27 @@
 							</a>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-copy"></i> <span>Alumnos</span></a>
+							<a href="#" class="nav-link"><i class="icon-users"></i> <span>Alumnos</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Layouts">
 								
 								<li class="nav-item"><a href="formAgregarAlumnos2.php" class="nav-link">Agregar alumnos</a></li>
 								<li class="nav-item"><a href="formEditarAlumnos2.php" class="nav-link">Editar alumnos</a></li>
-								<li class="nav-item"><a href="datatable_mostrarAlumnos2.php" class="nav-link active">Mostrar alumnos</a></li>
+								<li class="nav-item"><a href="datatable_mostrarAlumnos2.php" class="nav-link">Mostrar alumnos</a></li>
 							</ul>
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-color-sampler"></i> <span>Profesores</span></a>
+							<a href="#" class="nav-link"><i class="icon-user-tie"></i> <span>Profesores</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Themes">
 								<li class="nav-item"><a href="formAgregarProfesores2.php" class="nav-link">Agregar profesores</a></li>
 								<li class="nav-item"><a href="formEditarProfesores2.php" class="nav-link">Editar profesores</a></li>
-								<li class="nav-item"><a href="datatable_mostrarProfesores2.php" class="nav-link active">Mostrar profesores</a></li>
+								<li class="nav-item"><a href="datatable_mostrarProfesores2.php" class="nav-link">Mostrar profesores</a></li>
 							</ul>
 						</li>
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Materias</span></a>
+							<a href="#" class="nav-link"><i class="icon-books"></i> <span>Materias</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
@@ -442,7 +456,7 @@
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Grupos</span></a>
+							<a href="#" class="nav-link"><i class="icon-collaboration"></i> <span>Grupos</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
@@ -453,15 +467,27 @@
 						</li>
 
 						<li class="nav-item nav-item-submenu">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Pagos</span></a>
+							<a href="#" class="nav-link"><i class="icon-bus"></i> <span>Tranporte</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
 								
-								<li class="nav-item"><a href="formAgregarPago2.php" class="nav-link">Agregar pago</a></li>
+								<li class="nav-item"><a href="formAgregarPago2.php" class="nav-link">Reservar transporte (pagar)</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-reading"></i> <span>Tutorías</span></a>
+
+							<ul class="nav nav-group-sub" data-submenu-title="Starter kit">
+								
+								<li class="nav-item"><a href="formAgregarTutorias2.php" class="nav-link">Agregar tutorías</a></li>
+								<li class="nav-item"><a href="formEditarTutorias2.php" class="nav-link">Editar tutorías</a></li>
+								<li class="nav-item"><a href="datatable_mostrarTutorias2.php" class="nav-link">Mostrar tutorías</a></li>
 							</ul>
 						</li>
 
 						<!-- /main -->
+
 					</ul>
 				</div>
 				<!-- /main navigation -->
@@ -480,7 +506,7 @@
 			<div class="page-header page-header-light">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Form </span> - Grupos</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Form </span> - Alumnos</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -498,7 +524,7 @@
 						<div class="breadcrumb">
 							<a href="#" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
 							<a href="#" class="breadcrumb-item">Forms</a>
-							<span class="breadcrumb-item active">Agregar grupo</span>
+							<span class="breadcrumb-item active">Agregar alumno</span>
 						</div>
 
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -538,7 +564,7 @@
 				<!-- 2 columns form -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Datos del grupo</h5>
+						<h5 class="card-title">Datos del alumno</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -553,56 +579,102 @@
 							<div class="row">
 								<div class="col-md-6">
 									<fieldset>
-										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles generales</legend>
+										<legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Detalles personales</legend>
 										
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Nombre</label>
+											<div class="col-lg-9">
+												<div class="row">
+													<div class="col-md-6">
+														<input type="text" placeholder="Nombre" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido paterno" class="form-control">
+													</div>
+
+													<div class="col-md-6">
+														<input type="text" placeholder="Apellido materno" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Sexo:</label>
+	
+											<div class="form-check form-check-inline">
+												<label class="form-check-label">
+													<input type="radio" class="form-input-styled" name="gender" checked data-fouc>
+													Masculino
+												</label>
+											</div>
+	
+											<div class="form-check form-check-inline">
+												<label class="form-check-label">
+													<input type="radio" class="form-input-styled" name="gender" data-fouc>
+													Femenino
+												</label>
+											</div>
+										</div>
 								
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Clave de grupo</label>
+											<label class="col-lg-3 col-form-label">Ingresa tu matrícula</label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="Clave">
+												<input type="text" class="form-control" placeholder="Matrícula">
 											</div>
 										</div>
 										
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Nombre del grupo</label>
+											<label class="col-lg-3 col-form-label">Correo electrónico</label>
 											<div class="col-lg-9">
-												<input type="text" placeholder="Nombre" class="form-control">
+												<input type="text" placeholder="tucorreo@gmail.com" class="form-control">
 											</div>
 										</div>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Número de grupo</label>
+											<label class="col-lg-3 col-form-label">Teléfono celular</label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="Número de grupo">
+												<input type="text" class="form-control" placeholder="Celular">
 											</div>
 										</div>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Edificio</label>
+											<label class="col-lg-3 col-form-label">Teléfono de emergencia</label>
 											<div class="col-lg-9">
-												<select data-placeholder="¿Dónde se encuentra?" class="form-control form-control-select2" data-fouc>
-													<option>
-														
-													</option>
-													<optgroup label="Edificios">
-														<option value="A">Edificio A</option>
-														<option value="B">Edificio B</option>
-														<option value="C">Edificio C</option>
-														<option value="H">Edificio H</option>
-													</optgroup>
-												</select>
+												<input type="text" class="form-control" placeholder="Celular">
+											</div>
+										</div>
+		
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Dirección</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="¿Dónde vives?">
 											</div>
 										</div>
 
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">CURP</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="CURP">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Observaciones</label>
+											<div class="col-lg-9">
+												<textarea rows="5" cols="5" class="form-control" placeholder="Opcional"></textarea>
+											</div>
+										</div>
 									</fieldset>
 								</div>
 
 								<div class="col-md-6">
 									<fieldset>
-					                	<legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> Datos específicos</legend>
+					                	<legend class="font-weight-semibold"><i class="icon-graduation2 mr-2"></i> Datos escolares</legend>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Selecciona carrera del grupo</label>
+											<label class="col-lg-3 col-form-label">Selecciona tu carrera</label>
 											<div class="col-lg-9">
 												<select data-placeholder="Carreras" class="form-control form-control-select2" data-fouc>
 													<option>
@@ -626,7 +698,7 @@
 										</div>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Cuatrimestre de la materia</label>
+											<label class="col-lg-3 col-form-label">Selecciona tu cuatrimestre</label>
 											<div class="col-lg-9">
 												<select data-placeholder="Cuatrimestres" class="form-control form-control-select2" data-fouc>
 													<option>
@@ -642,15 +714,23 @@
 														<option value="7">Cuatrimestre 7</option>
 														<option value="8">Cuatrimestre 8</option>
 														<option value="9">Cuatrimestre 9</option>
+														<option value="10">Cuatrimestre 10</option>
 													</optgroup>
 												</select>
 											</div>
 										</div>
 
 										<div class="form-group row">
-											<label class="col-lg-3 col-form-label">Clave del tutor</label>
+											<label class="col-lg-3 col-form-label">Año de ingreso</label>
 											<div class="col-lg-9">
-												<input type="text" class="form-control" placeholder="Tutor">
+												<input type="text" class="form-control" placeholder="Año">
+											</div>
+										</div>
+
+										<div class="form-group row">
+											<label class="col-lg-3 col-form-label">Promedio</label>
+											<div class="col-lg-9">
+												<input type="text" class="form-control" placeholder="10.0">
 											</div>
 										</div>
 
@@ -659,7 +739,7 @@
 							</div>
 
 							<div class="text-right">
-								<button type="submit" class="btn btn-primary">Agregar grupo <i class="icon-paperplane ml-2"></i></button>
+								<button type="button" class="btn btn-primary" id="noty_styled_white">Agregar alumno <i class="icon-profile ml-2"></i></button>
 							</div>
 						</form>
 					</div>

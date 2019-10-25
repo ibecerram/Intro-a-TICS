@@ -558,11 +558,18 @@ var SweetAlert = function () {
         // Warning alert
         $('#sweet_warning').on('click', function() {
             swalInit({
-                title: 'Are you sure?',
-                text: 'You will not be able to recover this imaginary file!',
+                title: '¿Estas seguro?',
                 type: 'warning',
+                
+                input: 'text',
+                inputPlaceholder: 'Your name or nickname',
+
+                html:
+                '<input id="swal-input1" class="swal2-input">' +
+                '<input id="swal-input2" class="swal2-input">',
+
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Sí, elimínalo!'
             });
         });
 
